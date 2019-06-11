@@ -1,0 +1,21 @@
+version: '3.2'
+
+services:
+
+  fpm:
+    image: gianiaz/test-code:latest
+    environment:
+      - PHP_IDE_CONFIG
+      - XDEBUG_CONFIG
+    networks:
+      testing_net:
+        ipv4_address: 10.0.0.20
+    volumes:
+    - .:/home/gianiaz/atm
+
+networks:
+  testing_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.0.0/16

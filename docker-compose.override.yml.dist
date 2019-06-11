@@ -1,0 +1,7 @@
+version: '3.2'
+
+services:
+  fpm:
+    environment:
+      XDEBUG_CONFIG: "remote_host=10.0.0.1 remote_port=9090 porcamado=20"
+      PHP_IDE_CONFIG: "serverName=OSS"
