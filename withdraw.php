@@ -2,11 +2,12 @@
 
 use Gianiaz\ATM\Entity\Atm;
 use Gianiaz\ATM\Exception\InvalidArgumentException as InvalidArgumentException;
+use Gianiaz\ATM\Factory\BundleMapFactory;
 
 require './vendor/autoload.php';
 
 
-$atm = new Atm([10, 20, 50, 100]);
+$atm = new Atm(BundleMapFactory::create([10, 20, 50, 100]));
 
 $richiesti = (int)$argv[1];
 

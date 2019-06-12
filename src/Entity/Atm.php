@@ -17,9 +17,9 @@ class Atm
     /**
      * @throws InvalidArgumentException
      */
-    public function __construct(array $tagli)
+    public function __construct(BundleMap $bundleMap)
     {
-        $this->atmBundle = new BundleMap($tagli);
+        $this->atmBundle = $bundleMap;
     }
 
     /**
